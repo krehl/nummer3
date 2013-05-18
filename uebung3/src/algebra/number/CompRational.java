@@ -34,12 +34,20 @@ public class CompRational extends NormRational implements Comparable<CompRationa
 		super(r);
 	}
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		CompRational a,b,c,d;
+		a = new CompRational(1,3);
+		b = new CompRational(1,2);
+		c = new CompRational(1,1);
+		d = new CompRational(-1,200);
+		assert (a.compareTo(b) == -1);
+		assert (a.compareTo(c) == -1);
+		assert a.compareTo(a) == 0;
+		assert (d.compareTo(d) == 0);
+		assert (c.compareTo(d) == 1);
+		assert a.compareTo(d) == 1;
+		assert d.compareTo(b) == -1;
+		System.out.print("Test successful");
 	}
 
 }
