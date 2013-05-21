@@ -165,6 +165,15 @@ public class Rational {
         if (links > rechts) return +1;
         return 0;
 	}
+	
+	/*public int compareTo(Object o) {
+		if (o.getClass()==this.getClass()) {
+			return this.compareTo(o);
+		} else {
+			throw new ClassCastException("Kann nur mit Rational verglichen werden!");
+		}
+	}*/
+	
 	//Vergleicht zwei Zahlen, wenn a > b -> -1
 	public static int compare(Rational a, Rational b) {
 		return (new Rational(a)).compareTo(b);

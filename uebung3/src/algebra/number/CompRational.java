@@ -8,6 +8,14 @@ public class CompRational extends NormRational implements Comparable<CompRationa
 	public int compareTo(CompRational b) {
         return super.compareTo(b);
 	}
+	
+	/*public int compareTo(Object o) {
+		if (o.getClass()==this.getClass()) {
+			return this.compareTo((CompRational)o);
+		} else {
+			throw new ClassCastException("Kann nur mit CompRational verglichen werden!");
+		}
+	}*/
 
 	public static int compare(CompRational a, CompRational b) {
 		return (new CompRational(a)).compareTo(b);
@@ -47,6 +55,7 @@ public class CompRational extends NormRational implements Comparable<CompRationa
 		assert (c.compareTo(d) == 1);
 		assert a.compareTo(d) == 1;
 		assert d.compareTo(b) == -1;
+		assert false:"Test successful";
 		System.out.print("Test successful");
 	}
 
